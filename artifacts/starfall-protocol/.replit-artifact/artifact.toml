@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "SPPyntex: Starfall Protocol"
+description = "A browser-based pixel-art bullet-hell shooter by SPPyntex and Safal Panta. Pilot the Vesper-01 through three nebula-defense waves and a three-phase dreadnought battle, with responsive controls, graze scoring, bombs, and locally saved settings and records."
+version = "1.0.0"
+id = "artifacts/starfall-protocol"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20503
+
+[services.development]
+run = "pnpm --filter @workspace/starfall-protocol run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/starfall-protocol", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/starfall-protocol/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20503"
+BASE_PATH = "/"
