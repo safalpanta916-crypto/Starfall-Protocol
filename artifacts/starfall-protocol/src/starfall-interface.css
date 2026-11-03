@@ -189,3 +189,61 @@
   .sf-title-layout { min-height: 0; padding: 32px 0 48px; }.sf-title-lockup { margin-top: 18px; }.sf-title-lockup h1 { font-size: clamp(48px, 8vw, 68px); }.sf-title-description { margin: 14px 0; }.sf-title-nav { margin-top: 15px; }.sf-title-aside { margin-top: 0; }.sf-pilot-silhouette { height: 89px; transform: scale(.77); margin: 2px auto -4px; }.sf-signal-card { padding: 12px 16px; }.sf-card-divider { margin: 9px 0; }.sf-card-foot { margin-top: 10px; }.sf-page-panel { max-height: calc(100dvh - 34px); padding-top: 18px; }.sf-settings-grid { gap: 15px 35px; padding: 15px 0; }.sf-setting-slider { margin: 6px 0; }.sf-tutorial-body { min-height: 180px; }.sf-tutorial { padding-top: 17px; }.sf-intro { min-height: 0; padding: 20px 30px 44px; }.sf-intro-content { margin: 24px auto 14px; }.sf-intro-content h2 { font-size: 46px; }.sf-intro-body { margin: 12px 0 8px; font-size: 10px; }.sf-intro-attribution { margin-bottom: 13px; }.sf-hud-bottom { bottom: 19px; }.sf-touch-controls { bottom: 64px; }
 }
 @media (prefers-reduced-motion: reduce) { .sf-panel-enter { animation: none; }.sf-interface *, .sf-interface *::before, .sf-interface *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; } }
+
+/* Studio identity and readable type scale */
+.sf-title-brandline { display: flex; align-items: center; gap: clamp(12px, 2vw, 24px); margin-top: 27px; }
+.sf-title-logo { display: block; width: clamp(88px, 13vw, 160px); height: auto; flex: none; object-fit: contain; background: #fff; }
+.sf-title-wordmark { min-width: 0; }
+.sf-title-wordmark .sf-eyebrow { font-size: 10px; }
+.sf-title-lockup { margin-top: 11px; }
+.sf-title-lockup h1 { font-size: clamp(50px, 6.8vw, 94px); }
+.sf-title-small { font-size: 10px; }
+.sf-title-description { margin: 22px 0 20px; font-size: 13px; }
+.sf-title-credit { margin: -8px 0 19px; color: #d3deef; font-size: 12px; letter-spacing: .06em; }
+.sf-button { font-size: 11px; }
+.sf-title-nav { margin-top: 22px; }
+.sf-title-nav button { font-size: 10px; }
+.sf-hud-label, .sf-hud-best, .sf-hud-stage span, .sf-hud-stage small, .sf-lives small, .sf-energy-heading, .sf-combo > span { font-size: 9px; }
+.sf-hud-best, .sf-lives small, .sf-energy-heading, .sf-combo > span { font-size: 8px; }
+.sf-hud-stage small { font-size: 8px; }
+.sf-energy-heading { margin-bottom: 9px; }
+.sf-boss-heading { font-size: 10px; }
+.sf-hud-icon small { font-size: 8px; }
+.sf-setting-group h3, .sf-control-group h3 { font-size: 11px; }
+.sf-setting-row { font-size: 11px; }
+.sf-setting-row output { font-size: 10px; }
+.sf-control-row > span { font-size: 10px; }
+.sf-control-row kbd, .sf-control-row small { font-size: 9px; }
+.sf-page-footer > span { font-size: 8px; }
+.sf-credits-logo { display: block; width: clamp(96px, 12vw, 140px); height: auto; margin: 28px 0 14px; object-fit: contain; background: #fff; }
+.sf-credits h2 { font-size: 46px; }
+.sf-credit-role { font-size: 14px; }
+.sf-results-logo { display: block; width: 78px; height: 78px; margin: 0 0 12px; object-fit: contain; background: #fff; }
+.sf-results-score > span, .sf-results-score small { font-size: 9px; }
+.sf-stat span { font-size: 9px; }
+.sf-results-actions .sf-button { font-size: 10px; }
+.sf-touch-action { font-size: 9px; }
+
+@media (max-width: 560px) {
+  .sf-title-brandline { gap: 10px; margin-top: 20px; }
+  .sf-title-logo { width: clamp(84px, 22vw, 92px); }
+  .sf-title-lockup { margin-top: 8px; }
+  .sf-title-lockup h1 { font-size: clamp(39px, 12.5vw, 52px); }
+  .sf-title-wordmark .sf-eyebrow { font-size: 8px; }
+  .sf-title-small { font-size: 8px; }
+  .sf-title-description { margin: 15px 0 12px; font-size: 12px; }
+  .sf-title-credit { margin: 0 0 16px; font-size: 11px; }
+  .sf-title-actions .sf-button { min-height: 43px; padding-right: 10px; padding-left: 10px; font-size: 10px; }
+  .sf-title-nav { margin-top: 15px; }
+  .sf-title-nav button { font-size: 9px; }
+  .sf-hud-label, .sf-hud-best, .sf-hud-stage span, .sf-hud-stage small, .sf-lives small, .sf-energy-heading, .sf-combo > span { font-size: 8px; }
+  .sf-hud-stage small { font-size: 7px; }
+  .sf-boss-heading { font-size: 8px; }
+  .sf-setting-group h3, .sf-control-group h3, .sf-setting-row, .sf-control-row > span { font-size: 10px; }
+  .sf-control-row kbd, .sf-control-row small { font-size: 8px; }
+  .sf-credit-role { font-size: 12px; }
+  .sf-credits-logo { width: 100px; margin-top: 22px; }
+  .sf-results-logo { width: 62px; height: 62px; }
+  .sf-results-score > span, .sf-results-score small, .sf-stat span { font-size: 8px; }
+  .sf-results-actions .sf-button { font-size: 9px; }
+}

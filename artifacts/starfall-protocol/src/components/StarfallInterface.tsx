@@ -170,13 +170,19 @@ export default function StarfallInterface(props: StarfallInterfaceProps) {
       {props.screen === 'title' && (
         <section className="sf-title-layout sf-panel-enter">
           <div className="sf-title-copy">
-            <p className="sf-eyebrow"><span className="sf-live-dot" /> SIGNAL DETECTED <span className="sf-eyebrow-line" /> SECTOR 09 / VEGA</p>
-            <div className="sf-title-lockup">
-              <div className="sf-title-small">THE LAST LIGHT BEFORE THE VOID</div>
-              <h1>STARFALL<span>PROTOCOL</span></h1>
-              <div className="sf-title-rule"><i /><span>✦</span><i /></div>
+            <div className="sf-title-brandline">
+              <img className="sf-title-logo" src={`${import.meta.env.BASE_URL}brand/sppyntex-logo.jpg`} alt="SPPyntex logo" />
+              <div className="sf-title-wordmark">
+                <p className="sf-eyebrow"><span className="sf-live-dot" /> SIGNAL DETECTED <span className="sf-eyebrow-line" /> SECTOR 09 / VEGA</p>
+                <div className="sf-title-lockup">
+                  <div className="sf-title-small">THE LAST LIGHT BEFORE THE VOID</div>
+                  <h1>STARFALL<span>PROTOCOL</span></h1>
+                  <div className="sf-title-rule"><i /><span>✦</span><i /></div>
+                </div>
+              </div>
             </div>
             <p className="sf-title-description">An ancient gate has awakened.<br />The Aetherion is already here.</p>
+            <p className="sf-title-credit">Developed by Safal Panta</p>
             <div className="sf-title-actions">
               <button className="sf-button sf-button-primary" onClick={props.onStart}><span>▶</span> BEGIN FLIGHT <kbd>ENTER</kbd></button>
               {props.canContinue && <button className="sf-button sf-button-quiet" onClick={props.onContinue}>CONTINUE RUN <span>↗</span></button>}
@@ -297,7 +303,7 @@ export default function StarfallInterface(props: StarfallInterfaceProps) {
       {props.screen === 'credits' && (
         <section className="sf-credits sf-panel-enter">
           <p className="sf-overline">A SMALL SIGNAL, SENT INTO THE DARK</p>
-          <div className="sf-credit-mark" aria-hidden="true"><i /><i /><i /></div>
+          <img className="sf-credits-logo" src={`${import.meta.env.BASE_URL}brand/sppyntex-logo.jpg`} alt="SPPyntex logo" />
           <h2>SPPyntex</h2>
           <div className="sf-credit-rule" />
           <p className="sf-credit-role">Developed by Safal Panta</p>
@@ -322,6 +328,7 @@ export default function StarfallInterface(props: StarfallInterfaceProps) {
       {props.screen === 'results' && (
         <section className="sf-results sf-panel-enter">
           <div className={`sf-result-stamp ${props.result?.cleared ? 'is-clear' : ''}`}>{props.result?.cleared ? 'MISSION CLEAR' : 'SIGNAL LOST'}<span>{props.result?.cleared ? 'GATE SILENCED' : 'VESPER-01 / RECOVERY PENDING'}</span></div>
+          <img className="sf-results-logo" src={`${import.meta.env.BASE_URL}brand/sppyntex-logo.jpg`} alt="SPPyntex logo" />
           <div className="sf-results-heading"><p className="sf-overline">RUN DEBRIEF / VEGA FRONTIER</p><h2>{props.result?.cleared ? 'THE STARS REMAIN.' : 'FLIGHT ENDED.'}</h2></div>
           <div className="sf-results-score"><span>FINAL SCORE</span><strong>{formatScore(props.result?.score ?? props.score)}</strong><small>PERSONAL BEST <b>{formatScore(props.result?.bestScore ?? props.bestScore)}</b></small></div>
           <div className="sf-stats-grid">

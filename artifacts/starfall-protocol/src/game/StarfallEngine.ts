@@ -736,6 +736,7 @@ export class StarfallEngine {
       ) {
         this.bullets.splice(i, 1);
         this.damagePlayer();
+        return;
       }
     }
   }
