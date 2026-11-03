@@ -1,0 +1,14 @@
+[build]
+  command = "pnpm --filter @workspace/starfall-protocol... run build"
+  # Paths are relative to the repository root (the build base directory).
+  publish = "artifacts/starfall-protocol/dist/public"
+
+[build.environment]
+  BASE_PATH = "/"
+  PORT = "3000"
+
+# Single-page app fallback so client-side routes resolve to index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
