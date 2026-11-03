@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import type { CSSProperties, PointerEvent as ReactPointerEvent } from 'react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import '../starfall-interface.css';
 
 export type GameScreen =
@@ -307,6 +308,10 @@ export default function StarfallInterface(props: StarfallInterfaceProps) {
           <h2>SPPyntex</h2>
           <div className="sf-credit-rule" />
           <p className="sf-credit-role">Developed by Safal Panta</p>
+          <div className="sf-credit-links">
+            <a className="sf-credit-link" href="https://github.com/safalpanta916-crypto" target="_blank" rel="noopener noreferrer" aria-label="Safal Panta on GitHub"><FaGithub aria-hidden="true" /><span>GITHUB</span></a>
+            <a className="sf-credit-link" href="https://www.linkedin.com/in/safal-panta-a69958415/" target="_blank" rel="noopener noreferrer" aria-label="Safal Panta on LinkedIn"><FaLinkedin aria-hidden="true" /><span>LINKEDIN</span></a>
+          </div>
           <p className="sf-credit-dedication">For those who keep flying<br />when the stars go quiet.</p>
           <button className="sf-button sf-button-outline" onClick={props.onBack}>← BACK TO FLIGHT DECK</button>
           <div className="sf-credit-version">STARFALL PROTOCOL <span>·</span> BUILD 01.09</div>

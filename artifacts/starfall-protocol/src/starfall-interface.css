@@ -247,3 +247,9 @@
   .sf-results-score > span, .sf-results-score small, .sf-stat span { font-size: 8px; }
   .sf-results-actions .sf-button { font-size: 9px; }
 }
+
+/* Developer links on the credits screen */
+.sf-credit-links { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 18px 0 0; }
+.sf-credit-link { display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border: 1px solid rgba(109, 226, 241, .45); background: rgba(10, 14, 35, .6); color: #d8ecff; font-family: 'Oxanium', sans-serif; font-size: 11px; letter-spacing: .16em; text-decoration: none; transition: border-color .2s, color .2s, box-shadow .2s, transform .2s; }
+.sf-credit-link svg { width: 16px; height: 16px; }
+.sf-credit-link:hover, .sf-credit-link:focus-visible { border-color: var(--sf-amber); color: var(--sf-amber); box-shadow: 0 0 14px rgba(246, 189, 105, .3); transform: translateY(-1px); outline: none; }
